@@ -1,0 +1,57 @@
+{
+  "name": "node-ddns-webcaller",
+  "version": "1.0.0",
+  "description": "Dynamic DNS Webcaller (Node.js App)",
+  "main": "",
+  "scripts": {
+    "dev": "nodemon --ignore *.json --trace-warnings src/app.js",
+    "start": "node src/app.js",
+    "test": "mocha -w"
+  },
+  "engines": {
+    "node": ">= 16.0.0",
+    "npm": ">= 8.0.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "clear": "^0.1.0",
+    "figlet": "^1.5.2",
+    "moment": "^2.29.4",
+    "node-cron": "^3.0.2",
+    "prompts": "^2.4.2",
+    "winston": "^3.8.2",
+    "winston-daily-rotate-file": "^4.7.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.19"
+  },
+  "bin": "src/app.js",
+  "pkg": {
+    "assets": [
+      "./node_modules/*",
+      "./assets/**/*"
+    ],
+    "scripts": "src/**/*.js",
+    "outputPath": "dist",
+    "targets": [
+      "node16-linux-x64",
+      "node16-win-x64"
+    ]
+  },
+  "keywords": [
+    "ddns",
+    "webcall"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anzurvilla/node-ddns-webcaller.git"
+  },
+  "bugs": {
+    "url": "https://github.com/anzurvilla/node-ddns-webcaller/issues"
+  },
+  "homepage": "https://github.com/anzurvilla/node-ddns-webcaller#readme",
+  "author": "Anzur Villa",
+  "license": "GPL-3.0"
+}
